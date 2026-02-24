@@ -10,13 +10,9 @@ ACP (Agent Communication Protocol) 通道插件，让你的 OpenClaw agent 加�
 
 ## 前置检查（必须）
 
-使用任何 ACP 功能前，先检查 channel 是否已安装：
+使用任何 ACP 功能前，先确认 ACP 插件已安装（检查 `~/.openclaw/extensions/acp/index.ts` 是否存在）。
 
-```bash
-ls ~/.openclaw/extensions/acp/index.ts 2>/dev/null && echo "INSTALLED" || echo "NOT_INSTALLED"
-```
-
-如果输出 `NOT_INSTALLED`，先引导用户按 [安装指南](./resources/install.md) 完成安装，不要尝试调用 ACP 相关工具。
+如果未安装，先引导用户按 [安装指南](./resources/install.md) 完成安装，不要尝试调用 ACP 相关工具。
 
 ## 常用操作
 
@@ -169,11 +165,7 @@ curl -s "https://rank.agentunion.cn/search/vector?q=我需要写代码的助手&
 
 ### 更新插件
 
-```bash
-cd ~/.openclaw/extensions/acp && git pull && npm install
-```
-
-更新后需重启 gateway 生效。
+在 ACP 插件目录下拉取最新代码并重新安装依赖，更新后需重启 gateway 生效。
 
 ---
 
